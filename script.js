@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const confirmationDiv = document.getElementById('confirmation');
     const successMessageDiv = document.getElementById('successMessage');
     const errorDiv = document.getElementById('error');
+    const requirementsDiv = document.getElementById('requirements');
     const confirmYesButton = document.getElementById('confirmYes');
     const confirmNoButton = document.getElementById('confirmNo');
     const confirmedFirstNameSpan = document.getElementById('confirmedFirstName');
@@ -25,8 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
         stepDiv.style.display = 'block';
     }
 
-    // Initial state: Show Step 1, hide Step 2 and Step 3
+    // Function to show requirements
+    function showRequirements() {
+        requirementsDiv.style.display = 'block';
+    }
+
+    // Function to hide requirements
+    function hideRequirements() {
+        requirementsDiv.style.display = 'none';
+    }
+
+    // Initial state: Show Step 1 and requirements, hide Step 2, Step 3, and messages
     showStep(step1Div);
+    showRequirements();
     hideStep(step2Div);
     hideStep(step3Div);
     confirmationDiv.style.display = 'none';
@@ -49,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             confirmedLastNameSpan.textContent = lastName;
             errorDiv.innerHTML = '';
             hideStep(step1Div);
+            hideRequirements();
         } else {
             errorDiv.innerHTML = 'Please enter both first and last names in ALL CAPS.';
             confirmationDiv.style.display = 'none';
@@ -62,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         successMessageDiv.style.display = 'block';
         confirmationDiv.style.display = 'none';
         showStep(step2Div);
+        showRequirements(); // Show requirements for Step 2
     });
 
     submit2Button.addEventListener('click', function (e) {
@@ -73,26 +87,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const studentId = studentIdInput.value;
         const email = emailInput.value;
 
-        // Check if the email starts with the student ID
+        // Check if the email starts with the student ID and validate the email format
         if (email.startsWith(studentId) && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
             successMessageDiv.textContent = 'Awesome! 3 more steps to go <3';
             showStep(step3Div);
             hideStep(step2Div);
+            hideRequirements();
         } else {
             errorDiv.innerHTML = 'Please enter a valid email that starts with your student ID.';
         }
     });
 
-    submit3Button.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        // You can add logic for Step 3 submission here
-
-        // Assuming you want to move to Step 4 after Step 3 submission
-        successMessageDiv.textContent = 'You are doing great! 2 more steps to go <3';
-        showStep(step4Div);
-        hideStep(step3Div);
-    });
-
-    // You can continue adding similar logic for the remaining steps as needed.
+    // ... (continue with the rest of the JavaScript code)
 });

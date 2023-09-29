@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UVA Sharaara Baby Information</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Add any additional meta tags, stylesheets, or scripts here -->
 </head>
 <body>
@@ -12,47 +13,49 @@
     <h1>WELCOME TO SHARAARA!!</h1>
     <p>Congradulations on making UVA's premiere All Female and Non-binary Bollywood Fusion Dance Team! Follow the steps below to complete some important tasks before first practice!!</p>
 
-    <div id="step1"  style="display: none;">
-        <h2>Step 1: What's your name?</h2>
-        <form id="nameForm">
-            <input type="text" id="last_name" name="last_name" placeholder="SUR NAME" required>
-            <input type="text" id="first_name" name="first_name" placeholder="LEGAL 1ST NAME" required>
-            <br>
-            <input type="submit" id="submit1" value="Submit">
-        </form>
-    </div>
+    <div class="container">
+        <div id="step1"  style="display: none;">
+            <h2>Step 1: What's your name?</h2>
+            <form id="nameForm">
+                <input type="text" id="last_name" name="last_name" placeholder="SUR NAME" required>
+                <input type="text" id="first_name" name="first_name" placeholder="LEGAL 1ST NAME" required>
+                <br>
+                <input type="submit" id="submit1" value="Submit">
+            </form>
+        </div>
 
-    <div id="step2" style="display: none;">
-        <h2>Step 2: ENTER COMPUTING ID AND EMAIL!</h2>
-        <form id="studentForm">
-            <input type="text" id="student_id" name="student_id" placeholder="computing_id" required>
-            <br>
-            <br>
-            <input type="email" id="email" name="email" placeholder="email" required>
-            <br>
-            <input type="submit" id="submit2" value="Submit">
-        </form>
-    </div>
+        <div id="step2" style="display: none;">
+            <h2>Step 2: ENTER COMPUTING ID AND EMAIL!</h2>
+            <form id="studentForm">
+                <input type="text" id="student_id" name="student_id" placeholder="computing_id" required>
+                <br>
+                <br>
+                <input type="email" id="email" name="email" placeholder="email" required>
+                <br>
+                <input type="submit" id="submit2" value="Submit">
+            </form>
+        </div>
 
-    <div id="step3" style="display: none;">
-        <h2>Step 3: we NEED your LOCATION!</h2>
-        <form id="locationForm">
-            <input type="text" id="school_address" name="school_address" placeholder="Dorm Building and Room #" required>
-            <br>
-            <br>
-            <input type="text" id="home_address" name="home_address" placeholder="Mailing Address por favor" required>
-            <br>
-            <input type="submit" id="submit3" value="Submit">
-        </form>
-    </div>
+        <div id="step3" style="display: none;">
+            <h2>Step 3: we NEED your LOCATION!</h2>
+            <form id="locationForm">
+                <input type="text" id="school_address" name="school_address" placeholder="Dorm Building and Room #" required>
+                <br>
+                <br>
+                <input type="text" id="home_address" name="home_address" placeholder="Mailing Address por favor" required>
+                <br>
+                <input type="submit" id="submit3" value="Submit">
+            </form>
+        </div>
 
-    <div id="step4" style="display: none;">
-        <h2>Step 3: Enter Additional Information</h2>
-        <form id="additionalInfoForm">
-            <!-- Add input fields for additional information here -->
-            <br>
-            <input type="submit" id="submit3" value="Submit">
-        </form>
+        <div id="step4" style="display: none;">
+            <h2>Step 3: Enter Additional Information</h2>
+            <form id="additionalInfoForm">
+                <!-- Add input fields for additional information here -->
+                <br>
+                <input type="submit" id="submit4" value="Submit">
+            </form>
+        </div>
     </div>
 
     <div id="confirmation" style="display: none;">
@@ -66,6 +69,14 @@
     </div>
 
     <div id="error"></div>
+
+    <div id="requirements" style="display: none;">
+        <h3>Requirements:</h3>
+        <ul>
+            <li>First and last name must be in ALL CAPS.</li>
+            <li>Email must start with your computing ID (e.g., your_student_id@virginia.edu).</li>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
     <!-- End of page content -->
