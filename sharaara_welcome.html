@@ -12,10 +12,62 @@
     <h1>WELCOME TO SHARAARA!!</h1>
     <p>Congradulations on making UVA's premiere All Female and Non-binary Bollywood Fusion Dance Team! Follow the steps below to complete some important tasks before first practice!!</p>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Sur Name">
-    <input type="text" id="name" name="name" placeholder="Legal First Name">
+    <div id="step1"  style="display: none;">
+        <h2>Step 1: What's your name?</h2>
+        <form id="nameForm">
+            <input type="text" id="last_name" name="last_name" placeholder="SUR NAME" required>
+            <input type="text" id="first_name" name="first_name" placeholder="LEGAL 1ST NAME" required>
+            <br>
+            <input type="submit" id="submit1" value="Submit">
+        </form>
+    </div>
 
+    <div id="step2" style="display: none;">
+        <h2>Step 2: ENTER COMPUTING ID AND EMAIL!</h2>
+        <form id="studentForm">
+            <input type="text" id="student_id" name="student_id" placeholder="computing_id" required>
+            <br>
+            <br>
+            <input type="email" id="email" name="email" placeholder="email" required>
+            <br>
+            <input type="submit" id="submit2" value="Submit">
+        </form>
+    </div>
+
+    <div id="step3" style="display: none;">
+        <h2>Step 3: we NEED your LOCATION!</h2>
+        <form id="locationForm">
+            <input type="text" id="school_address" name="school_address" placeholder="Dorm Building and Room #" required>
+            <br>
+            <br>
+            <input type="text" id="home_address" name="home_address" placeholder="Mailing Address por favor" required>
+            <br>
+            <input type="submit" id="submit3" value="Submit">
+        </form>
+    </div>
+
+    <div id="step4" style="display: none;">
+        <h2>Step 3: Enter Additional Information</h2>
+        <form id="additionalInfoForm">
+            <!-- Add input fields for additional information here -->
+            <br>
+            <input type="submit" id="submit3" value="Submit">
+        </form>
+    </div>
+
+    <div id="confirmation" style="display: none;">
+        <p>Are you sure that this is your first name: "<span id="confirmedFirstName"></span>" and this is your last name: "<span id="confirmedLastName"></span>"?</p>
+        <button id="confirmYes">Yes</button>
+        <button id="confirmNo">No</button>
+    </div>
+
+    <div id="successMessage" style="display: none;">
+        <p></p>
+    </div>
+
+    <div id="error"></div>
+
+    <script src="script.js"></script>
     <!-- End of page content -->
 
     <!-- Add any scripts or additional content that should appear at the end of the body section here -->
