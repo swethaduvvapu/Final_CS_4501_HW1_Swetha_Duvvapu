@@ -168,19 +168,27 @@ document.addEventListener('DOMContentLoaded', function () {
     submit4Button.addEventListener('click', function (e) {
         e.preventDefault();
     
-        const birthdayInput = document.getElementById('birthday');
-        const genderInput = document.getElementById('gender');
+        // Get the values from Step 4 inputs
+        const birthday = document.getElementById('birthday').value;
+        const gender = document.getElementById('gender').value;
     
-        const birthday = birthdayInput.value;
-        const gender = genderInput.value;
-    
-        if (isValidDateFormat(birthday)) {
-            successMessageDiv.textContent = 'Congratulations! You have completed all the steps!';
-            hideStep(step4Div);
-            hideRequirements();
-            errorDiv.innerHTML = ''; // Clear any previous error messages
+        // Check if any of the fields in Step 4 are empty or if the gender is not selected
+        if (birthday.trim() === '' || gender.trim() === '' || gender === 'Select a number') {
+            // Display the error message for Step 4
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = 'Please fill out all fields in Step 4.';
+            errorDiv.style.display = 'block';
         } else {
-            errorDiv.innerHTML = 'Incorrect, make sure all information is inputted correctly!';
+            // Clear the error message for Step 4
+            if (isValidDateFormat(birthday)) {
+                successMessageDiv.textContent = 'Congratulations! You have completed all the steps!';
+                hideStep(step4Div);
+                hideRequirements();
+                errorDiv.innerHTML = ''; // Clear any previous error messages
+            } else {
+                errorDiv.innerHTML = 'Incorrect, make sure all information is inputted correctly!';
+            }
         }
     });
+    
 });

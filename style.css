@@ -32,6 +32,7 @@ h2, p {
 /* Style Step 2 to be on the right */
 #step2 {
     width: 45%; /* Adjust the width as needed */
+    margin-left: 500px;
     float: right; /* Float Step 2 to the right */
 }
 
@@ -39,7 +40,8 @@ h2, p {
 #step3 {
     clear: both; /* Clear the floats above (Step 1 and Step 2) */
     width: 45%; /* Adjust the width as needed */
-    margin-top: 100px; /* Add spacing between Step 2 and Step 3 */
+    margin-left: 500px;
+    margin-top: 300px; /* Add spacing between Step 2 and Step 3 */
     float: right; /* Float Step 3 to the right */
 }
 
@@ -47,7 +49,7 @@ h2, p {
 #step4 {
     clear: both; /* Clear the floats above (Step 1, Step 2, and Step 3) */
     width: 45%; /* Adjust the width as needed */
-    margin-top: 100px; /* Add spacing between Step 3 and Step 4 */
+    margin-top: 300px; /* Add spacing between Step 3 and Step 4 */
     float: left; /* Float Step 4 to the left */
 }
 
