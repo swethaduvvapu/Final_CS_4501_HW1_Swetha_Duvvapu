@@ -1,6 +1,6 @@
 /* Apply styles to the body element for the background color */
 body {
-    background-color: #bf40bf; /* Bright purple color */
+    background-color: #800080; /* Bright purple color */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     font-family: Arial, sans-serif; /* Set a font-family */
@@ -16,36 +16,72 @@ h2, p {
     font-family: Trattatello, fantasy;
 }
 
-
-
 .container {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Push content to the edges */
+    align-items: flex-start; /* Align content to the top */
 }
 
-.step {
-    flex-basis: 48%; /* Adjust as needed to control the width of each step */
+/* Style Step 1 to be on the left */
+#step1 {
+    width: 45%; /* Adjust the width as needed */
+    margin-right: 20px; /* Add spacing between Step 1 and Step 2 */
+    float: left; /* Float Step 1 to the left */
 }
 
-.requirements {
-    color: #ff6dff;
-    flex-basis: 30%; /* Adjust as needed to control the width of the requirements */
-    margin-top: 20px; /* Add spacing between the steps and requirements */
-    font-size: 16px; /* Adjust font size as needed */
+/* Style Step 2 to be on the right */
+#step2 {
+    width: 45%; /* Adjust the width as needed */
+    float: right; /* Float Step 2 to the right */
 }
 
-.requirements h3 {
-    transform: rotate(-90deg); /* Rotate the text vertically */
-    transform-origin: right bottom; /* Adjust the origin for rotation */
-    white-space: nowrap; /* Prevent text wrapping */
-    margin-right: 10px; /* Add spacing between rotated text and list */
+/* Style Step 3 to be on the right and below Step 2 */
+#step3 {
+    clear: both; /* Clear the floats above (Step 1 and Step 2) */
+    width: 45%; /* Adjust the width as needed */
+    margin-top: 20px; /* Add spacing between Step 2 and Step 3 */
+    float: right; /* Float Step 3 to the right */
 }
 
-.requirements ul {
-    list-style-type: none;
-    padding-left: 0;
+/* Style Step 4 to be on the left and below Step 3 */
+#step4 {
+    clear: both; /* Clear the floats above (Step 1, Step 2, and Step 3) */
+    width: 45%; /* Adjust the width as needed */
+    margin-top: 20px; /* Add spacing between Step 3 and Step 4 */
+    float: left; /* Float Step 4 to the left */
 }
 
-.requirements li {
-    margin-bottom: 10px; /* Add spacing between list items */
+input[type="submit"],
+button {
+    font-size: 6px; /* Adjust the font size as needed */
+    padding: 1px 1px; /* Adjust the padding to control button size */
+}
+
+#requirements {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 100px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 10px;
+    font-family: "Trattatello", fantasy;
+    color: #6d006d;
+}
+
+#error {
+    color: #000000; /* Set the text color for error messages */
+    font-weight: lighter; /* Make the text bold */
+    margin-bottom: 10px; /* Add space below error messages */
+    position: absolute;
+    top: 0;
+}
+
+
+#successMessage {
+    font-size: 36px; /* Adjust the font size to make it big */
+    color: #ffff00; /* Set the color to bright yellow */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add some top margin to separate it from the form */
 }
