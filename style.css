@@ -56,7 +56,7 @@ h2, p {
 input[type="submit"],
 button {
     font-size: 6px; /* Adjust the font size as needed */
-    padding: 1px 1px; /* Adjust the padding to control button size */
+    padding: 1px 0.5px; /* Adjust the padding to control button size */
 }
 
 #requirements {
