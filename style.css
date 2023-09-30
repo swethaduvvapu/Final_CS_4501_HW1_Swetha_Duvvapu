@@ -74,6 +74,7 @@ button {
 
 #error {
     color: #000000; /* Set the text color for error messages */
+    font-family: 'Snell Roundhand', cursive;
     font-weight: lighter; /* Make the text bold */
     margin-bottom: 10px; /* Add space below error messages */
     position: absolute;
@@ -83,6 +84,7 @@ button {
 
 #successMessage {
     font-size: 36px; /* Adjust the font size to make it big */
+    font-family: 'Snell Roundhand', cursive;
     color: #ffff00; /* Set the color to bright yellow */
     text-align: center; /* Center-align the text */
     margin-top: 20px; /* Add some top margin to separate it from the form */
